@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #information {
+                margin: 40px 0px;
+            }
+
+            .flex-header-area {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                -ms-box-orient: horizontal;
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -moz-flex;
+                display: -webkit-flex;
+                display: flex;
+
+                -webkit-justify-content: space-around;
+                justify-content: space-around;
+                -webkit-flex-flow: row wrap;
+                flex-flow: row wrap;
+                -webkit-align-items: stretch;
+                align-items: stretch;
+            }
+
+            .flex-item {
+                background: rgb(100, 149, 237,0.5);
+                line-height: 75px;
+                color: rgb(51, 51, 51);
+                font-weight: bold;
+                font-size: 2em;
+                text-align: center;
+            }
+
+            .flex-item:nth-of-type(1) {flex-grow: 1; }
+            .flex-item:nth-of-type(2) {flex-grow: 4; }
+            .flex-item:nth-of-type(3) {flex-grow: 1; }
+
+            .line {
+                width: 35px;
+                height: 5px;
+                background-color: rgb(51, 51, 51);
+                margin: 6px 15px;
+            }
+
+            .menu {
+                padding: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <ul class="flex-header-area">
+            <li class="flex-item">Logo here</li>
+            <li class="flex-item"></li>
+            <li class="flex-item menu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </li>
+        </ul>
+        <main>
+            <div id="information">
+                <h2 class="example">BCIT</h2>
+                <p class="example">Hello</p>
+                <p class="example">Check out the programs!</p>
+            </div>
+
+            <p>My content here</p>
+
+            <button onclick="myFunction()">Click me</button>
+        </main>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("information");
+                x.querySelector("p.example").innerHTML = "Welcome";
+            }
+        </script>
+    </body>
+</html>

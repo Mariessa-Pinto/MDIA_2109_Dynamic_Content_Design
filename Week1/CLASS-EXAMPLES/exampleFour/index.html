@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <div id="content">
+            <h2 class="here">Education</h2>
+            <p class="here">Come and checkout our programs at BCIT!</p>
+        </div>
+
+        <p>Click the button to add a background color</p>
+
+        <button onclick="myFunction()">Click me</button>
+        <script>
+            function myFunction() {
+                var lengthNum =  2;
+                var x = document.getElementById("content").querySelectorAll(".here");
+
+                for(var i = 0; i < lengthNum; i++) {
+                    x[i].style.backgroundColor = "lightsteelblue"
+                }
+            }
+        </script>
+    </body>
+</html>
