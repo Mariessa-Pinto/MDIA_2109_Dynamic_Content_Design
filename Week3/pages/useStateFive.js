@@ -1,22 +1,37 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function UseStateFive() {
     const [number, setNumber] = useState(0);
     const [color, setColor] = useState("gray");
 
+    const [trigger, setTrigger] = useState(false);
+
     const HandleChange = () => {
         if(number == 2) {
             setColor("orange")
         }
+        console.log(number);
     }
+
+    useEffect(() => {
+        let interval;
+
+        if(trigger) {
+            interval = setInterval(() => {
+                HandleChange()
+                setTrigger(false)
+            }, 3000);
+        }
+        console.log(number);
+        console.log(trigger);
+        return () => clearInterval(interval);
+    }, [trigger]);
 
     return(
         <div>
             <button onClick={() => {
-                console.log(number)
                 setNumber(number + 1)
-                HandleChange()
-                console.log(number)
+                setTrigger(true)
                 }}>
                 Add Number
                 </button>
