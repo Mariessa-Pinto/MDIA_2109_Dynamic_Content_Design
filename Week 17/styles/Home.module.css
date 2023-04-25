@@ -1,0 +1,13 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding);
+  min-height: 100vh;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  color: var(--color);
+  background-color: var(--background-color);
+}
+
